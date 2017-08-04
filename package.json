@@ -1,0 +1,21 @@
+{
+  "name": "nodeexpressmysqlcrud",
+  "version": "1.0.0",
+  "description": "great app",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon App.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0",
+    "mysql": "^2.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MuhammetYavuzCayli/nodeexpressmysqlcrud.git"
+  },
+  "author": "Yavuz Cayli",
+  "license": "ISC"
+}
