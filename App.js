@@ -25,16 +25,16 @@ app.use(function (req, res, next) {
 });
 //query leri çalıştıracak fonksiyon
 function queryExecuter(req, res, query) {
-
+//query için mysqle bağlanma fonksiyonu getConnection()
     pool.getConnection(function (err, connection) {
         if (err) res.send({ "code": 100, "status": "Error in connection database", "Error": err.message });
         console.log('connected as id ' + connection.threadId);
-
+        //queryi çalıştıracak ve response edecek kısım
         connection.query(query, function (err, recordset) {
             connection.release();
             res.send(recordset);
         });
-
+        //Bağlantı sırasında oluşacak hatalar için hata dinleyici
         connection.on('error', function (err) {
             res.send({ "code": 100, "status": "Error in connection database" });
             return;
