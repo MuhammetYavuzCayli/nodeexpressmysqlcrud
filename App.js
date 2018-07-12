@@ -6,7 +6,7 @@ var mysql = require("mysql");
 
 //Mysql bağlantısı için gerekli config ve pool kısmı
 var pool = mysql.createPool({
-    connectionLimit: 1000, //kaç thread e kadar cevap vermesi gerektiğini belirttiğimiz Limit değeri bu ÖNEMLİ!!
+    connectionLimit: 1000, //Ne kadar cevap vermesi gerektiğini belirttiğimiz Limit değeri bu ÖNEMLİ!!
     host: 'localhost', //lokalde çalışıyorsanız
     user: 'root', //varsayılan olarak root der sanıyorum mysqlciler
     password: 'password', //burası veritabanı şifren
